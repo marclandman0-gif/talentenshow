@@ -1,3 +1,8 @@
+<?php
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,15 +35,15 @@
       <ul class="navbar-nav ms-auto">
 
         <li class="nav-item">
-          <a class="nav-link active" href="index.html">Home</a>
+          <a class="nav-link active" href="index.php">Home</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="bestel.html">Tickets</a>
+          <a class="nav-link" href="bestel.php">Tickets</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="jury.html">Jury</a>
+          <a class="nav-link" href="aanmelddeelnemers.php">Aanmelden</a>
         </li>
 
         <li class="nav-item">
@@ -55,10 +60,9 @@
   </div>
 </nav>
 
-<main>
+
 <main class="d-flex justify-content-center mt-4">
     <img src="img/talentenshow banner.png" class="img-fluid" alt="Talentenshow Banner" style="max-width: 600px;">
-</main>
 </main>
 
 <footer>

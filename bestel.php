@@ -30,15 +30,15 @@
       <ul class="navbar-nav ms-auto">
 
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link active" href="index.php">Home</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" href="bestel.html">Tickets</a>
+          <a class="nav-link" href="bestel.php">Tickets</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="jury.html">Jury</a>
+          <a class="nav-link" href="aanmelddeelnemers.php">Aanmelden</a>
         </li>
 
         <li class="nav-item">
@@ -54,6 +54,7 @@
 
   </div>
 </nav>
+
 
 <main>
 
