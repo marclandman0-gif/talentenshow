@@ -47,11 +47,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="shows.html">Shows</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link" href="login.php">login</a>
         </li>
 
       </ul>

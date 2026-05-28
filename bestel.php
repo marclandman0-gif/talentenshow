@@ -30,11 +30,11 @@
       <ul class="navbar-nav ms-auto">
 
         <li class="nav-item">
-          <a class="nav-link active" href="index.php">Home</a>
+          <a class="nav-link" href="index.php">Home</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="bestel.php">Tickets</a>
+          <a class="nav-link active" href="bestel.php">Tickets</a>
         </li>
 
         <li class="nav-item">
@@ -42,11 +42,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="shows.html">Shows</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link" href="login.php">login</a>
         </li>
 
       </ul>
