@@ -72,7 +72,7 @@
             <!-- PRAKTISCHE INFO -->
             <div class="col-sm">
                 <h2>Praktische informatie</h2>
-                <p><strong>Datum:</strong> 24 mei 2025</p>
+                <p><strong>Datum:</strong> 26 oktober 2026</p>
                 <p><strong>Tijd:</strong> 19:30 uur</p>
                 <p><strong>Locatie:</strong> Cultureel Centrum De Lichtbron, Utrecht</p>
                 <p><strong>Deuren open:</strong> 18:30 uur</p>
@@ -84,10 +84,10 @@
             <!-- OVER DE TALENTENSHOW -->
             <div class="col-sm">
                 <h2>Over de Talentenshow</h2>
-                <p><strong>ShowTime Live</strong> is een talentenshow waar jonge en ervaren artiesten hun passie kunnen laten zien aan publiek en jury. 
-                Tijdens deze avond staan zang, dans, instrumentale acts en toneel centraal. 
-                Het evenement biedt deelnemers de kans om hun talent te tonen, ervaring op te doen en een geweldige avond neer te zetten voor bezoekers. 
-                Bezoekers kunnen genieten van entertainment, muziek en verrassende optredens van talenten uit de regio.</p>
+                <p><strong>ShowTime Live</strong> is een talentenshow waar jonge en ervaren artiesten hun passie kunnen laten zien aan publiek en jury.
+                    Tijdens deze avond staan zang, dans, instrumentale acts en toneel centraal.
+                    Het evenement biedt deelnemers de kans om hun talent te tonen, ervaring op te doen en een geweldige avond neer te zetten voor bezoekers.
+                    Bezoekers kunnen genieten van entertainment, muziek en verrassende optredens van talenten uit de regio.</p>
             </div>
 
             <!-- OVER DE JURY -->
@@ -111,21 +111,33 @@
 
 
 <!-- FOOTER -->
-<footer class="mt-4">
+<footer class="bg-light text-dark mt-5 pt-4 pb-4">
     <div class="container">
         <div class="row">
 
-            <div class="col">
+            <!-- Navigatie -->
+            <div class="col-md-4 mb-3">
+                <h5 class="text-uppercase">Navigatie</h5>
                 <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="bestel.php">Tickets</a></li>
-                    <li><a href="aanmelddeelnemers.php">Aanmelden</a></li>
-                    <li><a href="login.php">Login</a></li>
+                    <li><a href="index.php" class="text-dark text-decoration-none">Home</a></li>
+                    <li><a href="bestel.php" class="text-dark text-decoration-none">Tickets</a></li>
+                    <li><a href="aanmelddeelnemers.php" class="text-dark text-decoration-none">Aanmelden</a></li>
+                    <li><a href="login.php" class="text-dark text-decoration-none">Login</a></li>
                 </ul>
             </div>
 
-            <div class="col">
-                2 of 2
+            <!-- Contact -->
+            <div class="col-md-4 mb-3">
+                <h5 class="text-uppercase">Contact</h5>
+                <p class="mb-1">Talentenshow Organisatie</p>
+                <p class="mb-1">E-mail: info@talentenshow.nl</p>
+                <p class="mb-1">Telefoon: 06-12345678</p>
+            </div>
+
+            <!-- Copyright -->
+            <div class="col-md-4 mb-3 text-md-end text-center">
+                <h5 class="text-uppercase">© 2026 Talentenshow</h5>
+                <p class="mb-0">Alle rechten voorbehouden</p>
             </div>
 
         </div>
