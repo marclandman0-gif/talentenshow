@@ -1,4 +1,5 @@
 <?php
+require_once "db.php";
 ?>
 
 <!DOCTYPE html>
@@ -56,64 +57,91 @@
     </div>
 </nav>
 
-
-<!-- MAIN CONTENT -->
 <main>
-    <div class="container mt-5 mb-5">
+<div class="container mt-5 mb-5">
 
-        <h2 class="mb-4">Aanmelden voor de Talentenshow</h2>
+    <div class="p-4 border rounded shadow-sm bg-white">
 
-        <form action="aanmeldverwerk.php" method="POST" class="row g-3">
+        <h2 class="mb-4 text-center">Aanmelden voor de Talentenshow</h2>
 
-            <!-- Voornaam -->
+        <form action="aanmeldverwerk.php" method="POST" class="row g-4">
+
+            <!-- Persoonsgegevens -->
+            <h4 class="mt-3 mb-1">Persoonsgegevens</h4>
+            <hr>
+
             <div class="col-md-4">
                 <label class="form-label">Voornaam</label>
                 <input type="text" name="voornaam" class="form-control" required>
             </div>
 
-            <!-- Tussenvoegsel -->
             <div class="col-md-4">
                 <label class="form-label">Tussenvoegsel (optioneel)</label>
                 <input type="text" name="tussenvoegsel" class="form-control">
             </div>
 
-            <!-- Achternaam -->
             <div class="col-md-4">
                 <label class="form-label">Achternaam</label>
                 <input type="text" name="achternaam" class="form-control" required>
             </div>
 
-            <!-- Adres -->
-            <div class="col-md-6">
-                <label class="form-label">Adres</label>
-                <input type="text" name="adres" class="form-control" required>
+            <div class="col-md-4">
+                <label class="form-label">Geslacht</label>
+                <select name="geslacht" class="form-select" required>
+                    <option value="">-- Kies geslacht --</option>
+                    <option value="man">Man</option>
+                    <option value="vrouw">Vrouw</option>
+                    <option value="anders">Anders</option>
+                </select>
             </div>
 
-            <!-- Postcode -->
-            <div class="col-md-3">
-                <label class="form-label">Postcode</label>
-                <input type="text" name="postcode" class="form-control" required>
+            <div class="col-md-4">
+                <label class="form-label">Leeftijd</label>
+                <input type="number" name="leeftijd" class="form-control" min="1" required>
             </div>
 
-            <!-- Woonplaats -->
-            <div class="col-md-3">
-                <label class="form-label">Woonplaats</label>
-                <input type="text" name="woonplaats" class="form-control" required>
-            </div>
+            <!-- Contactgegevens -->
+            <h4 class="mt-4 mb-1">Contactgegevens</h4>
+            <hr>
 
-            <!-- E-mail -->
             <div class="col-md-6">
                 <label class="form-label">E‑mailadres</label>
                 <input type="email" name="email" class="form-control" required>
             </div>
 
-            <!-- Leeftijd -->
-            <div class="col-md-3">
-                <label class="form-label">Leeftijd</label>
-                <input type="number" name="leeftijd" class="form-control" min="1" required>
+            <div class="col-md-6">
+                <label class="form-label">Telefoonnummer</label>
+                <input type="text" name="telefoonnummer" class="form-control" required>
             </div>
 
-            <!-- Categorie -->
+            <!-- Adres -->
+            <h4 class="mt-4 mb-1">Adres</h4>
+            <hr>
+
+            <div class="col-md-6">
+                <label class="form-label">Straatnaam</label>
+                <input type="text" name="straatnaam" class="form-control" required>
+            </div>
+
+            <div class="col-md-3">
+                <label class="form-label">Huisnummer</label>
+                <input type="text" name="huisnummer" class="form-control" required>
+            </div>
+
+            <div class="col-md-3">
+                <label class="form-label">Postcode</label>
+                <input type="text" name="postcode" class="form-control" required>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Woonplaats</label>
+                <input type="text" name="woonplaats" class="form-control" required>
+            </div>
+
+            <!-- Talent -->
+            <h4 class="mt-4 mb-1">Talent</h4>
+            <hr>
+
             <div class="col-md-6">
                 <label class="form-label">Categorie</label>
                 <select name="categorie" class="form-select" required>
@@ -126,7 +154,6 @@
                 </select>
             </div>
 
-            <!-- Overig tekstvak -->
             <div class="col-md-6">
                 <label class="form-label">Overig (optioneel)</label>
                 <input type="text" name="overig_omschrijving" class="form-control"
@@ -134,8 +161,8 @@
             </div>
 
             <!-- Verstuur knop -->
-            <div class="col-12 mt-3">
-                <button type="submit" class="btn btn-primary w-100">
+            <div class="col-12 mt-4">
+                <button type="submit" class="btn btn-primary w-100 py-2 fs-5">
                     Aanmelden
                 </button>
             </div>
@@ -143,7 +170,10 @@
         </form>
 
     </div>
+
+</div>
 </main>
+
 
 
 <!-- FOOTER -->
