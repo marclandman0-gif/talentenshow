@@ -77,7 +77,7 @@ require_once "db.php";
 
             <div class="col-md-4">
                 <label class="form-label">Tussenvoegsel (optioneel)</label>
-                <input type="text" name="tussenvoegsel" class="form-control">
+                <input type="text" name="tussenstuk" class="form-control">
             </div>
 
             <div class="col-md-4">
@@ -91,6 +91,7 @@ require_once "db.php";
                     <option value="">-- Kies geslacht --</option>
                     <option value="man">Man</option>
                     <option value="vrouw">Vrouw</option>
+                    <option value="magnetron">Magnetron</option>
                     <option value="anders">Anders</option>
                 </select>
             </div>
@@ -144,7 +145,7 @@ require_once "db.php";
 
             <div class="col-md-6">
                 <label class="form-label">Categorie</label>
-                <select name="categorie" class="form-select" required>
+                <select name="talent" class="form-select" required>
                     <option value="">-- Kies een categorie --</option>
                     <option value="dans">Dans</option>
                     <option value="zang">Zang</option>
@@ -177,8 +178,38 @@ require_once "db.php";
 
 
 <!-- FOOTER -->
-<footer></footer>
+<footer class="bg-light text-dark mt-5 pt-4 pb-4">
+    <div class="container">
+        <div class="row">
 
+            <!-- Navigatie -->
+            <div class="col-md-4 mb-3">
+                <h5 class="text-uppercase">Navigatie</h5>
+                <ul>
+                    <li><a href="index.php" class="text-dark text-decoration-none">Home</a></li>
+                    <li><a href="bestel.php" class="text-dark text-decoration-none">Tickets</a></li>
+                    <li><a href="aanmelddeelnemers.php" class="text-dark text-decoration-none">Aanmelden</a></li>
+                    <li><a href="login.php" class="text-dark text-decoration-none">Login</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-md-4 mb-3">
+                <h5 class="text-uppercase">Contact</h5>
+                <p class="mb-1">Talentenshow Organisatie</p>
+                <p class="mb-1">E-mail: info@talentenshow.nl</p>
+                <p class="mb-1">Telefoon: 06-12345678</p>
+            </div>
+
+            <!-- Copyright -->
+            <div class="col-md-4 mb-3 text-md-end text-center">
+                <h5 class="text-uppercase">© 2026 Talentenshow</h5>
+                <p class="mb-0">Alle rechten voorbehouden</p>
+            </div>
+
+        </div>
+    </div>
+</footer>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3/dist/js/bootstrap.bundle.min.js"></script>
