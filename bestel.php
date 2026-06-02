@@ -3,21 +3,53 @@ require_once "db.php";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    // Tickets
     $std = intval($_POST['standardAmount']);
     $vip = intval($_POST['vipAmount']);
     $aantal_tickets = $std + $vip;
 
-    // Gegevens
     $voornaam = $_POST['voornaam'];
-    $tussen = $_POST['tussenvoegsel'];
+    $tussenstuk = $_POST['tussenvoegsel'];
     $achternaam = $_POST['achternaam'];
     $email = $_POST['email'];
-    $telefoon = $_POST['telefoonnummer'];
-    $straat= $_POST['straat'];
+    $telefoonnummer = $_POST['telefoonnummer'];
+    $straatnaam = $_POST['straat'];
     $huisnummer = $_POST['huisnummer'];
     $postcode = $_POST['postcode'];
     $woonplaats = $_POST['woonplaats'];
+
+    $sql = "INSERT INTO ticketverkoop
+    (
+        voornaam,
+        tussenstuk,
+        achternaam,
+        email,
+        telefoonnummer,
+        postcode,
+        straatnaam,
+        huisnummer,
+        woonplaats,
+        aantal_tickets
+    )
+    VALUES
+    (
+        '$voornaam',
+        '$tussenstuk',
+        '$achternaam',
+        '$email',
+        '$telefoonnummer',
+        '$postcode',
+        '$straatnaam',
+        '$huisnummer',
+        '$woonplaats',
+        '$aantal_tickets'
+    )";
+    
+    if ($conn->query($sql) === TRUE) {
+        header("Location: bestel.php?success=1");
+        exit();
+    } else {
+        echo "Fout: " . $conn->error;
+    }
 }
 ?>
 
@@ -177,10 +209,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </label>
                     </div>
 
-                    <div class="col-12">
-                        <button class="btn btn-primary w-100 py-2 fs-5">
-                            Reserveren en doorgaan
-                        </button>
+<button type="submit" class="btn btn-primary w-100 py-2 fs-5">
+    Reserveren en doorgaan
+</button>
                     </div>
 
                 </form>

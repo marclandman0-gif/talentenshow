@@ -1,6 +1,57 @@
 <?php
 require_once "db.php";
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    $voornaam = $_POST['voornaam'];
+    $tussenstuk = $_POST['tussenstuk'];
+    $achternaam = $_POST['achternaam'];
+    $geslacht = $_POST['geslacht'];
+    $leeftijd = intval($_POST['leeftijd']);
+    $email = $_POST['email'];
+    $telefoonnummer = $_POST['telefoonnummer'];
+    $straatnaam = $_POST['straatnaam'];
+    $huisnummer = $_POST['huisnummer'];
+    $postcode = $_POST['postcode'];
+    $woonplaats = $_POST['woonplaats'];
+    $talent = $_POST['talent'];
+
+$sql = "INSERT INTO aanmeldingen (
+    voornaam,
+    tussenstuk,
+    achternaam,
+    leeftijd,
+    geslacht,
+    email,
+    telefoonnummer,
+    postcode,
+    straatnaam,
+    huisnummer,
+    woonplaats,
+    talent
+) VALUES (
+    '$voornaam',
+    '$tussenstuk',
+    '$achternaam',
+    '$leeftijd',
+    '$geslacht',
+    '$email',
+    '$telefoonnummer',
+    '$postcode',
+    '$straatnaam',
+    '$huisnummer',
+    '$woonplaats',
+    '$talent'
+)";
+    
+    if ($conn->query($sql) === TRUE) {
+        header("Location: aanmelddeelnemers.php?success=1");
+        exit();
+    } else {
+        echo "Fout: " . $conn->error;
+    }
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -64,7 +115,15 @@ require_once "db.php";
 
         <h2 class="mb-4 text-center">Aanmelden voor de Talentenshow</h2>
 
-        <form action="aanmeldverwerk.php" method="POST" class="row g-4">
+
+                <!-- SUCCESS MELDING -->
+                <?php if (isset($_GET['success']) && $_GET['success'] == 1): ?>
+                    <div class="alert alert-success">
+                        Deelname gelukt! We kijken ernaar uit om jouw talent te zien op het podium. Je ontvangt binnenkort een bevestiging per e-mail.
+                    </div>
+                <?php endif; ?>
+
+        <form action="aanmelddeelnemers.php" method="POST" class="row g-4">
 
             <!-- Persoonsgegevens -->
             <h4 class="mt-3 mb-1">Persoonsgegevens</h4>
@@ -162,11 +221,9 @@ require_once "db.php";
             </div>
 
             <!-- Verstuur knop -->
-            <div class="col-12 mt-4">
-                <button type="submit" class="btn btn-primary w-100 py-2 fs-5">
-                    Aanmelden
-                </button>
-            </div>
+<button type="submit" class="btn btn-primary w-100 py-2 fs-5">
+    Reserveren en doorgaan
+</button>
 
         </form>
 
