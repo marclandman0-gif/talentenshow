@@ -3,44 +3,53 @@ require_once "db.php";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    // Tickets
     $std = intval($_POST['standardAmount']);
     $vip = intval($_POST['vipAmount']);
-    $totaal = $std + $vip;
+    $aantal_tickets = $std + $vip;
 
-    // Gegevens
     $voornaam = $_POST['voornaam'];
-    $tussen = $_POST['tussenvoegsel'];
+    $tussenstuk = $_POST['tussenvoegsel'];
     $achternaam = $_POST['achternaam'];
     $email = $_POST['email'];
-    $telefoon = $_POST['telefoonnummer'];
-    $straat = $_POST['straat'];
+    $telefoonnummer = $_POST['telefoonnummer'];
+    $straatnaam = $_POST['straat'];
     $huisnummer = $_POST['huisnummer'];
     $postcode = $_POST['postcode'];
     $woonplaats = $_POST['woonplaats'];
 
-    // SQL
-    $stmt = $pdo->prepare("
-        INSERT INTO bestellingen 
-        (voornaam, tussenstuk, achternaam, email, telefoonnummer, postcode, straatnaam, huisnummer, woonplaats, aantal_tickets)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-    ");
-
-    $stmt->execute([
-        $voornaam,
-        $tussen,
-        $achternaam,
-        $email,
-        $telefoon,
-        $postcode,
-        $straat,
-        $huisnummer,
-        $woonplaats,
-        $totaal
-    ]);
-
-    header("Location: bestel.php?success=1");
-    exit;
+    $sql = "INSERT INTO ticketverkoop
+    (
+        voornaam,
+        tussenstuk,
+        achternaam,
+        email,
+        telefoonnummer,
+        postcode,
+        straatnaam,
+        huisnummer,
+        woonplaats,
+        aantal_tickets
+    )
+    VALUES
+    (
+        '$voornaam',
+        '$tussenstuk',
+        '$achternaam',
+        '$email',
+        '$telefoonnummer',
+        '$postcode',
+        '$straatnaam',
+        '$huisnummer',
+        '$woonplaats',
+        '$aantal_tickets'
+    )";
+    
+    if ($conn->query($sql) === TRUE) {
+        header("Location: bestel.php?success=1");
+        exit();
+    } else {
+        echo "Fout: " . $conn->error;
+    }
 }
 ?>
 
@@ -75,20 +84,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- NAV LINKS -->
+        <!-- LINKS -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link " href="index.php">Home</a>
+                    <a class="nav-link" href="index.php">Home</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active " href="bestel.php">Tickets</a>
+                    <a class="nav-link active" href="bestel.php">Tickets</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="aanmelddeelnemers.php">Aanmelden</a>
+                    <a class="nav-link " href="aanmelddeelnemers.php">Aanmelden</a>
                 </li>
 
                 <li class="nav-item">
@@ -100,7 +109,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     </div>
 </nav>
-
 
 <main>
 <div class="container py-5">
@@ -201,10 +209,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </label>
                     </div>
 
-                    <div class="col-12">
-                        <button class="btn btn-primary w-100 py-2 fs-5">
-                            Reserveren en doorgaan
-                        </button>
+<button type="submit" class="btn btn-primary w-100 py-2 fs-5">
+    Reserveren en doorgaan
+</button>
                     </div>
 
                 </form>
@@ -244,6 +251,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </div>
 </main>
 
+<!-- FOOTER -->
+<footer class="bg-light text-dark mt-5 pt-4 pb-4">
+    <div class="container">
+        <div class="row">
+
+            <!-- Navigatie -->
+            <div class="col-md-4 mb-3">
+                <h5 class="text-uppercase">Navigatie</h5>
+                <ul>
+                    <li><a href="index.php" class="text-dark text-decoration-none">Home</a></li>
+                    <li><a href="bestel.php" class="text-dark text-decoration-none">Tickets</a></li>
+                    <li><a href="aanmelddeelnemers.php" class="text-dark text-decoration-none">Aanmelden</a></li>
+                    <li><a href="login.php" class="text-dark text-decoration-none">Login</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-md-4 mb-3">
+                <h5 class="text-uppercase">Contact</h5>
+                <p class="mb-1">Talentenshow Organisatie</p>
+                <p class="mb-1">E-mail: info@talentenshow.nl</p>
+                <p class="mb-1">Telefoon: 06-12345678</p>
+            </div>
+
+            <!-- Copyright -->
+            <div class="col-md-4 mb-3 text-md-end text-center">
+                <h5 class="text-uppercase">© 2026 Talentenshow</h5>
+                <p class="mb-0">Alle rechten voorbehouden</p>
+            </div>
+
+        </div>
+    </div>
+</footer>
 
 <!-- TICKET UPDATE SCRIPT -->
 <script>
