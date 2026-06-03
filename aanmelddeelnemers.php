@@ -210,14 +210,7 @@ $sql = "INSERT INTO aanmeldingen (
                     <option value="zang">Zang</option>
                     <option value="toneel">Toneel</option>
                     <option value="instrumentaal">Instrumentaal</option>
-                    <option value="overig">Overig</option>
                 </select>
-            </div>
-
-            <div class="col-md-6">
-                <label class="form-label">Overig (optioneel)</label>
-                <input type="text" name="overig_omschrijving" class="form-control"
-                       placeholder="Beschrijf jouw act (alleen bij 'Overig')">
             </div>
 
             <!-- Verstuur knop -->
