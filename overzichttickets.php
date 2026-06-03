@@ -1,5 +1,7 @@
 <?php
 require_once "db.php";
+$sql = "SELECT * FROM ticketverkoop";
+$result = $conn->query($sql);
 ?>
 
 
@@ -63,8 +65,50 @@ require_once "db.php";
 <!-- MAIN CONTENT -->
 <main>
 
+    <h2 class="mb-4 text-center">Overzicht Ticketverkoop
+    </h2>
 
+    <table class="table table-striped table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th>ID</th>
+                <th>Voornaam</th>
+                <th>Tussenstuk</th>
+                <th>Achternaam</th>
+                <th>Email</th>
+                <th>Telefoonnummer</th>
+                <th>Postcode</th>
+                <th>Straatnaam</th>
+                <th>Huisnummer</th>
+                <th>Woonplaats</th>
+                <th>Aantal tickets</th>
+            </tr>
+        </thead>
 
+        <tbody>
+        <?php
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>{$row['id']}</td>";
+                echo "<td>{$row['voornaam']}</td>";
+                echo "<td>{$row['tussenstuk']}</td>";
+                echo "<td>{$row['achternaam']}</td>";
+                echo "<td>{$row['email']}</td>";
+                echo "<td>{$row['telefoonnummer']}</td>";
+                echo "<td>{$row['postcode']}</td>";
+                echo "<td>{$row['straatnaam']}</td>";
+                echo "<td>{$row['huisnummer']}</td>";
+                echo "<td>{$row['woonplaats']}</td>";
+                echo "<td>{$row['aantal_tickets']}</td>";
+                echo "</tr>";
+            }
+        } else {
+            echo "<tr><td colspan='13' class='text-center'>Geen gegevens gevonden</td></tr>";
+        }
+        ?>
+        </tbody>
+    </table>
 </main>
 
 
