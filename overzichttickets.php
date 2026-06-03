@@ -23,38 +23,20 @@ $result = $conn->query($sql);
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
 
-        <!-- LOGO -->
         <a class="navbar-brand d-flex align-items-center" href="index.php">
             <img src="img/talentenshow logo.png" alt="Logo">
             Talentenshow
         </a>
 
-        <!-- HAMBURGER -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- NAV LINKS -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.php">Home</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="bestel.php">Tickets</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="aanmelddeelnemers.php">Aanmelden</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="login.php">Login</a>
-                </li>
-
+                <li class="nav-item"><a class="nav-link" href="bestel.php">overzicht tickets</a></li>
+                <li class="nav-item"><a class="nav-link" href="aanmelddeelnemers.php">overzicht aanmeldingen</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.php">Logout</a></li>
             </ul>
         </div>
 
