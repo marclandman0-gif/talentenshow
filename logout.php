@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-// Set session variables
-$_SESSION['user'] = "jaaph";
-$_SESSION['logged_in'] = 1;
+$_SESSION = array();
 
-//destroy the session
-$_session = array();
-$session_destroy();
+session_destroy();
+
+header("Location: login.php");
+exit();
+?>

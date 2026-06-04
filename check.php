@@ -1,23 +1,37 @@
 <?php
 session_start();
-include_once('db.php');
 
-$conn = new mysqli("localhost", "root", "", "game");
+$conn = new mysqli("localhost", "root", "", "talentenshow");
+
+if ($conn->connect_error) {
+    die("Database verbinding mislukt.");
+}
 
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$sql = "SELECT * FROM player WHERE username='$username' AND password='$password'";
+$sql = "SELECT * FROM gebruikers
+        WHERE gebruikersnaam='$username'
+        AND wachtwoord='$password'";
+
 $result = $conn->query($sql);
 
 if ($result->num_rows == 1) {
 
     $_SESSION['user'] = $username;
+    $_SESSION['logged_in'] = true;
 
-    header("Location: http://localhost/talentenshow/overzichtaanmelingen.php");
-    exit;
+    header("Location: overzichtaanmeldingen.php");
+    exit();
 
 } else {
-    header("Location: http://localhost/talentenshow/login.php");
-    exit;
+
+    echo "
+    <script>
+        alert('Verkeerde gebruikersnaam of wachtwoord');
+        window.location.href='login.php';
+    </script>
+    ";
+
 }
+?>
