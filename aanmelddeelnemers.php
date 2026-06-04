@@ -157,7 +157,7 @@ $sql = "INSERT INTO aanmeldingen (
 
             <div class="col-md-4">
                 <label class="form-label">Leeftijd</label>
-                <input type="number" name="leeftijd" class="form-control" min="1" required>
+                <input type="number" name="leeftijd" class="form-control" min="1" max="127" required>
             </div>
 
             <!-- Contactgegevens -->

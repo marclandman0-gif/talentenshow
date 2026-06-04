@@ -14,10 +14,10 @@ if ($result->num_rows == 1) {
 
     $_SESSION['user'] = $username;
 
-    header("Location: http://localhost/PHP/datagame/overzichtaanmelingen.php");
+    header("Location: http://localhost/talentenshow/overzichtaanmelingen.php");
     exit;
 
 } else {
-    header("Location: http://localhost/PHP/datagame/login.php");
+    header("Location: http://localhost/talentenshow/login.php");
     exit;
 }
