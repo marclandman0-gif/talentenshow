@@ -35,7 +35,7 @@ $result = $conn->query($sql);
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="overzichttickets.php">overzicht tickets</a></li>
                 <li class="nav-item"><a class="nav-link active" href="overzichtaanmeldingen.php">overzicht aanmeldingen</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+                <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
             </ul>
         </div>
 
@@ -47,8 +47,8 @@ $result = $conn->query($sql);
 <main class="container mt-5">
 
     <h2 class="mb-4 text-center">Overzicht Deelnemers</h2>
-
-    <table class="table table-striped table-bordered">
+<div class="table-responsive">
+    <table  class="table table-striped table-bordered">
         <thead class="table-light">
             <tr>
                 <th>ID</th>
@@ -93,7 +93,7 @@ $result = $conn->query($sql);
         ?>
         </tbody>
     </table>
-
+</div>
 </main>
 
 

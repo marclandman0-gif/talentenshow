@@ -36,7 +36,7 @@ $result = $conn->query($sql);
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link active" href="overzichttickets.php">overzicht tickets</a></li>
                 <li class="nav-item"><a class="nav-link" href="overzichtaanmeldingen.php">overzicht aanmeldingen</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+                <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
             </ul>
         </div>
 
@@ -49,7 +49,7 @@ $result = $conn->query($sql);
 
     <h2 class="mb-4 text-center">Overzicht Ticketverkoop
     </h2>
-
+<div class="table-responsive">
     <table class="table table-striped table-bordered">
         <thead class="table-light">
             <tr>
@@ -89,8 +89,9 @@ $result = $conn->query($sql);
             echo "<tr><td colspan='13' class='text-center'>Geen gegevens gevonden</td></tr>";
         }
         ?>
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
 </main>
 
 

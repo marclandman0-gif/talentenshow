@@ -214,9 +214,11 @@ $sql = "INSERT INTO aanmeldingen (
             </div>
 
             <!-- Verstuur knop -->
-<button type="submit" class="btn btn-primary w-100 py-2 fs-5">
-    Reserveren en doorgaan
-</button>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary w-100 py-2 fs-5">
+                    Reserveren en doorgaan
+                </button>
+            </div>
 
         </form>
 

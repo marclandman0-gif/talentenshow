@@ -19,6 +19,15 @@ if (isset($_SESSION['logged_in'])) {
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+
+        <!-- LOGO -->
+        <a class="navbar-brand d-flex align-items-center" href="index.php">
+            <img src="img/X.png" alt="Logo">
+        </a>
+    </div>
+</nav>
 
 <div class="container mt-5">
 
