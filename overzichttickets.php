@@ -34,9 +34,9 @@ $result = $conn->query($sql);
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="bestel.php">overzicht tickets</a></li>
-                <li class="nav-item"><a class="nav-link" href="aanmelddeelnemers.php">overzicht aanmeldingen</a></li>
-                <li class="nav-item"><a class="nav-link" href="login.php">Logout</a></li>
+                <li class="nav-item"><a class="nav-link active" href="overzichttickets.php">overzicht tickets</a></li>
+                <li class="nav-item"><a class="nav-link" href="overzichtaanmeldingen.php">overzicht aanmeldingen</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
             </ul>
         </div>
 
