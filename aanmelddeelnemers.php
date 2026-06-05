@@ -175,7 +175,6 @@ $sql = "INSERT INTO aanmeldingen (
                 <input type="text" name="telefoonnummer" class="form-control" required>
             </div>
 
-            <!-- Adres -->
             <h4 class="mt-4 mb-1">Adres</h4>
             <hr>
 
@@ -199,10 +198,9 @@ $sql = "INSERT INTO aanmeldingen (
                 <input type="text" name="woonplaats" class="form-control" required>
             </div>
 
-            <!-- Talent -->
             <h4 class="mt-4 mb-1">Talent</h4>
             <hr>
-
+            <!-- Dropdown -->
             <div class="col-md-6">
                 <label class="form-label">Categorie</label>
                 <select name="talent" class="form-select" required>
@@ -264,7 +262,6 @@ $sql = "INSERT INTO aanmeldingen (
     </div>
 </footer>
 
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>

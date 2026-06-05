@@ -116,7 +116,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <div class="row g-5 justify-content-between">
 
-        <!-- LINKERKANT (SMALLE FORM CARD) -->
         <div class="col-lg-7">
 
             <div class="p-4 border rounded shadow-sm bg-white" style="max-width: 650px;">
@@ -132,7 +131,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <form action="bestel.php" method="POST" class="row g-4">
 
-                    <!-- 1. Tickets -->
+                    <!-- Tickets -->
                     <h4 class="mt-2 mb-1">1. Selecteer je tickets</h4>
                     <hr>
 
@@ -149,7 +148,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
 
 
-                    <!-- 2. Gegevens -->
+                    <!-- Gegevens -->
                     <h4 class="mt-4 mb-1">2. Jouw gegevens</h4>
                     <hr>
 
@@ -199,7 +198,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
 
 
-                    <!-- 3. Bevestiging -->
+                    <!-- Bevestiging -->
                     <h4 class="mt-4 mb-1">3. Bevestiging</h4>
                     <hr>
 
@@ -223,7 +222,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
 
 
-        <!-- RECHTERKANT (SIDEBAR) -->
+        <!-- Rechterkant -->
         <div class="col-lg-4">
 
             <div class="border rounded p-3 shadow-sm bg-white">
@@ -253,7 +252,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </div>
 </main>
 
-<!-- FOOTER -->
+<!-- Footer -->
 <footer class="bg-light text-dark mt-5 pt-4 pb-4">
     <div class="container">
         <div class="row">
@@ -287,7 +286,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </footer>
 
-<!-- TICKET UPDATE SCRIPT -->
+<!-- Ticket update script zijkand -->
 <script>
 function update() {
     let std = parseInt(document.getElementById("standardAmount").value) || 0;
@@ -310,6 +309,6 @@ document.getElementById("vipAmount").oninput = update;
 
 update();
 </script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
