@@ -6,9 +6,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dit is de homepage van de Talentenshow, waar bezoekers informatie kunnen vinden over het evenement, de jury en praktische details.">
     <title>Talentenshow Homepage</title>
 
-    <link rel="icon" type="image/x-icon" href="img/talentenshow logo.png">
+    <link rel="icon" type="image/x-icon" href="img/talentenshow logo - kopie.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
