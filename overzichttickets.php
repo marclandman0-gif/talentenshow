@@ -105,10 +105,9 @@ $result = $conn->query($sql);
             <div class="col-md-4 mb-3">
                 <h5 class="text-uppercase">Navigatie</h5>
                 <ul>
-                    <li><a href="index.php" class="text-dark text-decoration-none">Home</a></li>
-                    <li><a href="bestel.php" class="text-dark text-decoration-none">Tickets</a></li>
-                    <li><a href="aanmelddeelnemers.php" class="text-dark text-decoration-none">Aanmelden</a></li>
-                    <li><a href="login.php" class="text-dark text-decoration-none">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="overzichttickets.php">overzicht tickets</a></li>
+                <li class="nav-item"><a class="nav-link active" href="overzichtaanmeldingen.php">overzicht aanmeldingen</a></li>
+                <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>>
                 </ul>
             </div>
 
